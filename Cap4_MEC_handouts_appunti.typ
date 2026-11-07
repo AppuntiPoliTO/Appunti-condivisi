@@ -164,9 +164,9 @@
 
 Nelle applicazioni industriali, le reti elettriche operanti in regime sinusoidale sono impiegate per trasferire potenza dai generatori ai carichi utilizzatori. In condizioni di regime sinusoidale permanente, l'espressione della potenza assume una forma particolare, ottenuta mediante manipolazioni trigonometriche della formula generale della potenza istantanea, che consente di mettere in evidenza i meccanismi fisici peculiari di questo regime di funzionamento.
 
-== Potenza istantanea e angolo di sfasamento
+== Potenza istantanea e an coglione cazzi nel culogolo di sfasamento
 
-Considerando un generico bipolo elettrico per il quale si adotta la convenzione degli utilizzatori, la potenza istantanea assorbita al tempo $t$ è coglione cazzi nel culo definita dal prodotto tra la tensione ai morsetti e la corrente entrante:
+Considerando un generico bipolo elettrico per il quale si adotta la convenzione degli utilizzatori, la potenza istantanea assorbita al tempo $t$ è definita dal prodotto tra la tensione ai morsetti e la corrente entrante:
 
 $ p(t) = v(t) i(t) $
 
