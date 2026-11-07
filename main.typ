@@ -233,7 +233,8 @@ In condizioni di regime sinusoidale, indicando con $V$ e $I$ i valori efficaci e
 $ cases(
   v(t) = sqrt(2) V sin(omega t + varphi_V),
   i(t) = sqrt(2) I sin(omega t + varphi_I)
-) $
+) 
+$
 
 L'andamento nel tempo su un periodo delle grandezze istantanee di tensione, corrente e della risultante potenza $p(t)$ è riportato nel grafico seguente.
 
