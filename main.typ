@@ -228,7 +228,7 @@ $ p(t) = v(t) i(t) $
   })
 ]
 
-In condizioni di regime sinusoidale, indicando con $V$ e $I$ i valori efficaci e con $varphi_V$ e $varphi_I$ le fasi iniziali (rappresentate nel piano complesso dai fasori $macron(V) = V e^(j varphi_V)$ e $macron(I) = I e^(j varphi_I)$), le grandezze temporali di tensione e corrente si esprimono come: // VERIFICA: dedotto dall'equazione
+In condizioni di regime sinusoidale, indicando con $V$ e $I$ i valori efficaci e con $varphi_V$ e $varphi_I$ le fasi iniziali (rappresentate nel piano complesso dai fasori $macron(V) = V e^(j varphi_V)$ e $macron(I) = I e^(j varphi_I)$), le grandezze temporali di tensione e corrente si esprimono come: 
 
 $ cases(
   v(t) = sqrt(2) V sin(omega t + varphi_V),
