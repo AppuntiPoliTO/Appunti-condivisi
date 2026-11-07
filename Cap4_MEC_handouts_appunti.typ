@@ -1870,8 +1870,7 @@ $ cos phi' >= 0.95 quad <==> quad frac(W_Q, W_P) = tan phi' <= 0.33 $
     circle((10.5, 1.5), radius: 0.5, fill: white, stroke: 1pt)
     content((10.5, 1.5), sans("M", weight: "bold"))
   })
-]hi induttivi sono spenti, negli impianti con più macchine utilizzatrici (ad esempio motori asincroni $M$) si adotta frequentemente il *rifasamento distribuito*, collegando un condensatore dedicato direttamente ai morsetti di ciascun motore.
-
+]hi induttivi sono spenti, negli impianti con più macchine utilizzatrici (ad esempio motori asincroni $M$) si adotta frequentemente il *rifasamento distribuito*, collegando un condensatore dedicato direttamente ai morsetti di ciascun motore.]
 
 #align(center)[
   #zap.circuit({
