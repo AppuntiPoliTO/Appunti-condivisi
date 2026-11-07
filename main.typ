@@ -324,7 +324,7 @@ Data la rilevanza fisica dell'angolo caratteristico $varphi = varphi_V - varphi_
 
 $ 2 omega t + varphi_V + varphi_I = 2 omega t + varphi_V - varphi_I + varphi_I + varphi_I = 2(omega t + varphi_I) + varphi $
 
-Sostituendo tale identità nella formula della potenza istantanea si ottiene:
+Sostituendo tale identità nella formula della potenza istantanea si ottiene: 
 
 $ p(t) = V I {cos varphi - cos[2(omega t + varphi_I) + varphi]} $
 
