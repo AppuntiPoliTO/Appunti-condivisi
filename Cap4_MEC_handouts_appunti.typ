@@ -164,9 +164,9 @@
 
 Nelle applicazioni industriali, le reti elettriche operanti in regime sinusoidale sono impiegate per trasferire potenza dai generatori ai carichi utilizzatori. In condizioni di regime sinusoidale permanente, l'espressione della potenza assume una forma particolare, ottenuta mediante manipolazioni trigonometriche della formula generale della potenza istantanea, che consente di mettere in evidenza i meccanismi fisici peculiari di questo regime di funzionamento.
 
-== Potenza istantanea e an coglione cazzi nel culogolo di sfasamento
+== Potenza istantanea e angolo di sfasamento
 
-Considerando un generico bipolo elettrico per il quale si adotta la convenzione degli utilizzatori, la potenza istantanea assorbita al tempo $t$ è definita dal prodotto tra la tensione ai morsetti e la corrente entrante:
+Considerando un generico bipolo elettrico per il quale si adotta la convenzione degli utilizzatori, la potenza istantanea assorbita al tempo $t$ è coglione cazzi nel culo definita dal prodotto tra la tensione ai morsetti e la corrente entrante:
 
 $ p(t) = v(t) i(t) $
 
@@ -1825,6 +1825,53 @@ $ cos phi' >= 0.95 quad <==> quad frac(W_Q, W_P) = tan phi' <= 0.33 $
 #nota[
   La normativa prescrive inoltre che *in nessun caso l'utente possa immettere potenza reattiva capacitiva nella linea di distribuzione* (divieto di sovracompensazione, ovvero deve essere sempre $Q' >= 0$). Per evitare che una batteria di condensatori rimanga inserita a vuoto quando i carichi induttivi sono spenti, negli impianti con più macchine utilizzatrici (ad esempio motori asincroni $M$) si adotta frequentemente il *rifasamento distribuito*, collegando un condensatore dedicato direttamente ai morsetti di ciascun motore.
 ]
+
+#align(center)[
+  #zap.circuit({
+    
+    import zap.cetz.draw: *
+
+    // Impedenza di linea a monte
+    wire((0, 3), (1.2, 3))
+    resistor("zl", (1.2, 3), (3.2, 3), variant: "iec", label: (content: $macron(Z)_"l"$, anchor: "south", distance: 6pt))
+    wire((3.2, 3), (10.2, 3))
+    wire((0, 0), (10.2, 0))
+
+    // Gruppo Motore 1 + Condensatore 1
+    node("g1a", (4.5, 3))
+    node("g1b", (4.5, 0))
+    capacitor("c1", (4.5, 3), (4.5, 0), label: (content: $C_1$, anchor: "south", distance: 2pt))
+    node("m1a", (5.6, 3))
+    node("m1b", (5.6, 0))
+    wire((5.6, 3), (5.6, 2.0))
+    wire((5.6, 1.0), (5.6, 0))
+    circle((5.6, 1.5), radius: 0.5, fill: white, stroke: 1pt)
+    content((5.6, 1.5), sans("M", weight: "bold"))
+
+    // Gruppo Motore 2 + Condensatore 2
+    node("g2a", (7.0, 3))
+    node("g2b", (7.0, 0))
+    capacitor("c2", (7.0, 3), (7.0, 0), label: (content: $C_2$, anchor: "south", distance: 2pt))
+    node("m2a", (8.1, 3))
+    node("m2b", (8.1, 0))
+    wire((8.1, 3), (8.1, 2.0))
+    wire((8.1, 1.0), (8.1, 0))
+    circle((8.1, 1.5), radius: 0.5, fill: white, stroke: 1pt)
+    content((8.1, 1.5), sans("M", weight: "bold"))
+
+    // Gruppo Motore 3 + Condensatore 3
+    node("g3a", (9.4, 3))
+    node("g3b", (9.4, 0))
+    capacitor("c3", (9.4, 3), (9.4, 0), label: (content: $C_3$, anchor: "south", distance: 1pt))
+    wire((10.2, 3), (10.5, 3))
+    wire((10.2, 0), (10.5, 0))
+    wire((10.5, 3), (10.5, 2.0))
+    wire((10.5, 1.0), (10.5, 0))
+    circle((10.5, 1.5), radius: 0.5, fill: white, stroke: 1pt)
+    content((10.5, 1.5), sans("M", weight: "bold"))
+  })
+]hi induttivi sono spenti, negli impianti con più macchine utilizzatrici (ad esempio motori asincroni $M$) si adotta frequentemente il *rifasamento distribuito*, collegando un condensatore dedicato direttamente ai morsetti di ciascun motore.
+
 
 #align(center)[
   #zap.circuit({
