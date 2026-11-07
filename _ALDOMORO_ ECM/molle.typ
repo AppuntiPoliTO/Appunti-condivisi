@@ -11,6 +11,7 @@
   width: 100%, fill: luma(240), inset: 8pt, radius: 3pt, body,)
 #let circ = sym.degree
 #let varphi = $phi$
+#let varepsilon = $epsilon$
 #set page(
   numbering: "1",
   number-align: bottom + right,
