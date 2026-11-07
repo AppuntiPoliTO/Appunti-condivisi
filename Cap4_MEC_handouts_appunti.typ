@@ -166,7 +166,7 @@ Nelle applicazioni industriali, le reti elettriche operanti in regime sinusoidal
 
 == Potenza istantanea e angolo di sfasamento
 
-Considerando un generico bipolo elettrico per il quale si adotta la convenzione degli utilizzatori, la potenza istantanea assorbita al tempo $t$ è definita dal prodotto tra la tensione ai morsetti e la corrente entrante:
+Considerando un generico bipolo elettrico per il quale si adotta la convenzione degli utilizzatori, la potenza istantanea assorbita al tempo $t$ è coglione cazzi nel culo definita dal prodotto tra la tensione ai morsetti e la corrente entrante:
 
 $ p(t) = v(t) i(t) $
 
