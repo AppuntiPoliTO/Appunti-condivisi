@@ -481,7 +481,7 @@ Concludiamo che per un fluido in quiete, lo stato di tensione in un punto perde 
 L'equazione indefinita della statica dei fluidi rappresenta il caso degenere dell'Equazione di Cauchy (che governa la dinamica) quando si impone che la velocità del fluido sia identicamente nulla ($arrow(u) = 0$). Poiché il fluido è in quiete rispetto al sistema di riferimento, non vi sono scorrimenti tra strati adiacenti, e di conseguenza le componenti tangenziali del tensore degli sforzi sono nulle ($sigma_(i j) = 0$ per $i eq.not j$). Lo stato di tensione in un punto non è più definito da un tensore completo, ma dal solo sforzo normale di compressione, ovvero la pressione termodinamica $p$.
 
 === Derivazione su un elemento di volume infinitesimo
-Per ricavare le equazioni di equilibrio, consideriamo inizialmente l'approccio didattico basato sulle componenti cartesiane. Isoliamo un elemento di volume fluido infinitesimo (un volumetto) di dimensioni $dif x, dif y, dif z$.
+Per ricavare le equazioni di equilibrio, consideriamo inizialmente l'approccio didattico basato sulle componenti cartesiane. Isoliamo un elemento di volume fluido infinitesimo (un volumetto) di dimensioni $dif x, dif y, dif z$. 
     Affinché questo volumetto sia in equilibrio, la risultante delle forze di volume e delle forze di superficie deve essere nulla.
 
     Le forze di volume sono proporzionali alla massa dell'elemento. Considerando la sola accelerazione di gravità $arrow(g)$, la forza di volume è:
