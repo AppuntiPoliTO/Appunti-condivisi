@@ -60,15 +60,6 @@ Consideriamo l'interazione tra un fluido in movimento e un corpo solido immerso 
 
 A velocità elevate, e in particolare nell'ambito dell'aeroacustica, si osserva che l'intensità del rumore irradiato cresce molto rapidamente con la velocità del flusso. Più precisamente, la potenza acustica irradiata $P_"acustica"$ scala con la settima potenza della velocità caratteristica $U$:
 
-#grid(
-  columns: (1fr, 1fr),
-  column-gutter: 1em,
-  align: (center + horizon, center + horizon),
-  [
-    cazzoni lunghi
-  ],
-  [#image("images/fig_main_7156.png", width: 100%)]
-)
 
 
 
@@ -1792,17 +1783,6 @@ La retta d'azione di $arrow(S)_0$ coincide con quella di $arrow(Pi)_0$ (stessa d
 #v(1em)
 *Principio di Archimede:* un corpo immerso riceve una spinta verticale verso l'alto di modulo pari al peso del volume di fluido spostato ($S_"gall" = gamma V$).
 
-#grid(
-  columns: (1fr, 1fr),
-  column-gutter: 1em,
-  align: (center + horizon, center + horizon),
-  [
-    cazzi
-  ],
-  [#image("images/fig_main_2044.png", width: 100%)]
-)
-
-    
     Il peso proprio del corpo è $arrow(P) = gamma_s V hat(k)$. Il comportamento cinematico dipenderà dalla densità del solido rispetto a quella del fluido:
     - $gamma_s > gamma ==>$ il corpo *affonda*.
     - $gamma_s = gamma ==>$ equilibrio *indifferente* (resta sospeso).
