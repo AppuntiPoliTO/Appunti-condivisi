@@ -4,9 +4,6 @@
 #set par(justify: true)
 #set heading(numbering: none)
 #set page(margin: 1.5cm)
-#let immagine-originale = image
-#let image(nome-file, ..args) = immagine-originale("images/" + nome-file, ..args)
-// Nota / osservazione
 #let nota(body) = block(
   width: 100%, fill: luma(240), inset: 8pt, radius: 3pt, body,)
 #let circ = sym.degree
@@ -1018,7 +1015,7 @@ $ arrow(S) = -gamma hat(n) integral_A h dif A $
 Dal sistema di riferimento adottato, l'affondamento $h$ vale geometricamente $h = x sin alpha$:
     $ arrow(S) = -hat(n) gamma sin alpha integral_A x dif A $
 #align(center)[
-  #image("image9new.png", width: 60%)
+  #image("images/image9new.png", width: 60%)
 ]
 L'integrale $integral_A x dif A$ rappresenta il Momento statico di primo ordine dell'area rispetto all'asse di sponda $y$, indicato con $M_y = x_G A$, dove $x_G$ è la coordinata del baricentro. Sostituendo:
 $ arrow(S) = -hat(n) gamma underbrace(sin alpha thin x_G, h_G) A = - underbrace(gamma h_G, p_G) A thin hat(n) $
@@ -2121,7 +2118,7 @@ Un celebre risultato si ottiene applicando il bilancio di massa a un condotto a 
     Poiché le pareti sono impermeabili, il flusso normale attraverso $S_w$ è nullo ($bold(u) dot hat(n)_w = 0$). Sulle sezioni di ingresso e uscita assumiamo velocità uniformi e allineate con la normale. Scegliendo $hat(n)$ uscente dal volume:
   ],
   [
-    #image("condotto.png", width:110% )
+    #image("images/condotto.png", width:110% )
   ]
 )
 #v(1em)
