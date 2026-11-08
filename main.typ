@@ -1697,73 +1697,7 @@ La retta d'azione di $arrow(S)_0$ coincide con quella di $arrow(Pi)_0$ (stessa d
     
   ],
   [
-    // FASE 0 - COMPRENSIONE
-// Il disegno illustra la dimostrazione del principio di Archimede (spinta idrostatica su un corpo immerso).
-// Sono presenti: il piano dei carichi idrostatici (p.c.i.) con il simbolo del pelo libero, un corpo immerso di forma generica (campito a righe nere), le proiezioni verticali (in rosso) che delimitano il cilindro fluido sovrastante, il volume V1 sovrastante la superficie superiore (campito a righe rosse), il volume complessivo V2 fino alla superficie inferiore (campito a righe verdi), le piccole frecce della distribuzione di pressione lungo tutto il contorno e le risultanti verticali F_sopra (verso il basso) e F_sotto (verso l'alto).
-
-// FASE 1 - ANALISI
-// 1. PANNELLI E SCALA
-// Un solo pannello. Dimensioni immagine circa 600 x 560 px.
-// Scelgo origine O = (0, 0) in basso a sinistra, N = 75 px/cm -> larghezza circa 8.0 cm, altezza circa 7.2 cm.
-// Piano dei carichi idrostatici (p.c.i.): retta orizzontale a quota y = 6.2.
-
-// 2. ELEMENTI E CLASSIFICAZIONE DEL CONTORNO DEL CORPO
-// Il corpo immerso ha una forma chiusa generica (patata idrostatica) con concavità variabili e flessi lungo il fianco sinistro e destro.
-// Punti estremi di tangenza verticale (che definiscono i limiti del cilindro di proiezione):
-// Estremo sinistro: P_L = (0.8, 3.7), tangente verticale T = (0, -1).
-// Estremo destro:   P_R = (5.8, 2.2), tangente verticale T = (0, -1).
-// Estremo superiore piatto/colmo: P_T = (3.4, 4.5), tangente orizzontale T = (1, 0).
-// Estremo inferiore (fondo):      P_B = (3.6, 1.3), tangente orizzontale T = (1, 0).
-//
-// Campioni del contorno chiuso (in senso orario a partire da P_L):
-// i |   x   |   y   | note
-// 0 | 0.80  | 3.70  | estremo sinistro P_L (tangente verticale)
-// 1 | 1.30  | 4.35  | spalla superiore sinistra
-// 2 | 2.30  | 4.48  | tratto superiore quasi piatto
-// 3 | 3.40  | 4.50  | colmo superiore P_T (tangente orizzontale)
-// 4 | 4.65  | 4.25  | spalla superiore destra
-// 5 | 5.15  | 3.55  | flesso fianco destro P_FR
-// 6 | 5.45  | 2.90  | rientranza destra
-// 7 | 5.80  | 2.20  | estremo destro P_R (tangente verticale)
-// 8 | 5.20  | 1.55  | pancia inferiore destra
-// 9 | 3.60  | 1.30  | fondo P_B (tangente orizzontale)
-// 10| 2.15  | 1.75  | pancia inferiore sinistra
-// 11| 1.75  | 2.65  | flesso fianco sinistro P_FL
-// 12| 1.15  | 3.20  | rientranza sinistra
-//
-// Test del cerchio sul contorno: raggio medio circa 2.1, ma scarto massimo e_max = 0.34 > 0.08 -> fallito.
-// Test dell'ellisse con assi paralleli: cx = 3.3, cy = 2.9, a = 2.5, b = 1.6 -> sul campione 5 e 11 e_max = 0.28 > 0.08 -> fallito.
-// Inoltre sono presenti 2 flessi evidenti (uno sul fianco sinistro in P_FL=(1.65, 2.75) e uno sul fianco destro in P_FR=(5.25, 3.40)).
-// // BEZIER NECESSARIO: cerchio e_max = 0.34, ellisse e_max = 0.28, presenza di flessi sui fianchi.
-// Suddivido il contorno in 6 tratti di Bezier cubici con giunzioni C1 (stesse coordinate e stessa tangente unitaria nei punti di raccordo):
-// Tratto 1 (P_L -> P_T): da (0.80, 3.70) con T0=(0, 1) a (3.40, 4.50) con T3=(1, 0).
-//   Controlli: C1 = (0.80, 4.45), C2 = (2.00, 4.50).
-// Tratto 2 (P_T -> P_FR): da (3.40, 4.50) con T0=(1, 0) a (5.25, 3.40) con T3=(0.24, -0.97).
-//   Controlli: C1 = (4.60, 4.50), C2 = (5.10, 4.00).
-// Tratto 3 (P_FR -> P_R): da (5.25, 3.40) con T0=(0.24, -0.97) a (5.80, 2.20) con T3=(0, -1).
-//   Controlli: C1 = (5.40, 2.80), C2 = (5.80, 2.65).
-// Tratto 4 (P_R -> P_B): da (5.80, 2.20) con T0=(0, -1) a (3.60, 1.30) con T3=(-1, 0).
-//   Controlli: C1 = (5.80, 1.50), C2 = (4.80, 1.30).
-// Tratto 5 (P_B -> P_FL): da (3.60, 1.30) con T0=(-1, 0) a (1.65, 2.75) con T3=(-0.60, 0.80).
-//   Controlli: C1 = (2.30, 1.30), C2 = (2.05, 2.20).
-// Tratto 6 (P_FL -> P_L): da (1.65, 2.75) con T0=(-0.60, 0.80) a (0.80, 3.70) con T3=(0, 1).
-//   Controlli: C1 = (1.25, 3.30), C2 = (0.80, 3.25).
-
-// 3. LINEE DI PROIEZIONE, TRATTEGGI E VETTORI
-// - Retta p.c.i.: da (0.1, 6.2) a (7.4, 6.2).
-// - Simbolo pelo libero: triangolo a (1.5, 6.2) - (1.3, 6.5) - (1.7, 6.5), più segmenti sottostanti.
-// - Linee verticali rosse di proiezione:
-//   Sinistra: da (0.80, 3.70) a (0.80, 6.20) (tratteggiata a tratti lunghi nella parte alta come nello schizzo, realizzata con segmenti rossi).
-//   Destra: da (5.80, 2.20) a (5.80, 6.20) (linea continua rossa).
-// - Campitura rossa (V1, sopra il corpo): linee parallele inclinate da basso-sinistra ad alto-destra.
-// - Campitura verde (V2, da p.c.i. fino al fondo del corpo): linee parallele inclinate da alto-sinistra a basso-destra.
-// - Campitura nera (corpo): 4 segmenti paralleli inclinati da basso-sinistra ad alto-destra interni al corpo.
-// - Frecce di pressione: 17 piccole frecce nere lungo tutto il perimetro con punta sul contorno.
-// - Forze risultanti:
-//   F_sopra: freccia doppia verticale da (3.60, 5.55) a (3.60, 4.50).
-//   F_sotto: freccia doppia verticale da (3.20, 0.25) a (3.20, 1.32).
-
-// FASE 2 - COSTRUZIONE
+   
 #canvas(length: 1cm, {
   import draw: *
 
