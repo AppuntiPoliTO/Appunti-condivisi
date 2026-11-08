@@ -1846,7 +1846,7 @@ La retta d'azione di $arrow(S)_0$ coincide con quella di $arrow(Pi)_0$ (stessa d
   ]
 )
 #v(1em)
-*Principio di Archimede:* un corpo immerso riceve una spinta verticale verso l'alto di modulo pari al peso del volume di fluido spostato ($S_"gall" = gamma V$).
+*Principio di Archimede:* un corpo immerso riceve una spinta verticale verso l'alto di modulo pari al peso del volume di fluido spostato ($S_"gall" = gamma V$). cuccioli di cane duri come il ghiaccio
     
     Il peso proprio del corpo è $arrow(P) = gamma_s V hat(k)$. Il comportamento cinematico dipenderà dalla densità del solido rispetto a quella del fluido:
     - $gamma_s > gamma ==>$ il corpo *affonda*.
@@ -1861,7 +1861,7 @@ La retta d'azione di $arrow(S)_0$ coincide con quella di $arrow(Pi)_0$ (stessa d
 #pagebreak()
 = Cinematica dei Fluidi e Bilancio di Massa
 
-== Cinematica dei Fluidi cazzi
+== Cinematica dei Fluidi cazzi duri piselli
 
 Per poter studiare un fluido continuo trascurandone la natura corpuscolare, introduciamo il concetto di *scala macroscopica* $L$. Affinché l'ipotesi di continuo sia valida, il cammino libero medio delle molecole $l$ deve essere trascurabile rispetto a $L$. Definiamo quindi il numero di Knudsen:
 
