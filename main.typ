@@ -1861,7 +1861,7 @@ La retta d'azione di $arrow(S)_0$ coincide con quella di $arrow(Pi)_0$ (stessa d
 #pagebreak()
 = Cinematica dei Fluidi e Bilancio di Massa
 
-== Cinematica dei Fluidi
+== Cinematica dei Fluidi cazzi
 
 Per poter studiare un fluido continuo trascurandone la natura corpuscolare, introduciamo il concetto di *scala macroscopica* $L$. Affinché l'ipotesi di continuo sia valida, il cammino libero medio delle molecole $l$ deve essere trascurabile rispetto a $L$. Definiamo quindi il numero di Knudsen:
 

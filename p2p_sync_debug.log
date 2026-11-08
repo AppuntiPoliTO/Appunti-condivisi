@@ -1,0 +1,6 @@
+[2026-11-09 00:19:59.380] [HOST_STATE_APPLIED] {"role":"host","file":"main.typ","cmDocLen":210254,"ytextLen":210254,"yCollabAttachedNow":true,"equal":true}
+[2026-11-09 00:19:59.381] [HOST_STATE_APPLIED] {"role":"host","file":"main.typ","cmDocLen":210254,"ytextLen":210254,"hasCrInYText":false,"equal":true}
+[2026-11-09 00:20:20.456] [LOCAL_EDIT] {"role":"host","file":"main.typ","cmDocLen":210255,"ytextLen":210255,"hasCrInYText":false,"equal":true}
+[2026-11-09 00:20:21.334] [LOCAL_EDIT] {"role":"host","file":"main.typ","cmDocLen":210256,"ytextLen":210256,"hasCrInYText":false,"equal":true}
+[2026-11-09 00:20:21.616] [LOCAL_EDIT] {"role":"host","file":"main.typ","cmDocLen":210258,"ytextLen":210258,"hasCrInYText":false,"equal":true}
+[2026-11-09 00:20:22.062] [LOCAL_EDIT] {"role":"host","file":"main.typ","cmDocLen":210260,"ytextLen":210260,"hasCrInYText":false,"equal":true}
