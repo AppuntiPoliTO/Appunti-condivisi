@@ -1,4 +1,4 @@
-rt "@preview/cetz:0.3.4": canvas, draw
+#import "@preview/cetz:0.3.4": canvas, draw
 #set page(paper: "a4", margin: 2cm)
 #set text(lang: "it", size: 11pt)
 #set par(justify: true)
@@ -2204,9 +2204,9 @@ $arrow(u)=Q_v/S$ La portata volumetrica $Q_v = integral bold(u) dot hat(n) dif c
 = Dinamica dei Fluidi Ideali (Eulero e Bernoulli)
 
 == Bilancio della Quantità di Moto
+succhiami il cazzo
 
-Posssucchiami il cazzo
-iamo riformulare il Teorema del trasporto di Reynolds per includere esplicitamente l'equazione di conservazione della massa. A tale scopo, applichiamo il teorema a una grandezza specifica scalare arbitraria $chi$ moltiplicata per la densità ($phi = rho chi$), scegliendo uno scalare anziché direttamente il vettore velocità $bold(u)$ per semplificare i passaggi algebrici:
+Possiamo riformulare il Teorema del trasporto di Reynolds per includere esplicitamente l'equazione di conservazione della massa. A tale scopo, applichiamo il teorema a una grandezza specifica scalare arbitraria $chi$ moltiplicata per la densità ($phi = rho chi$), scegliendo uno scalare anziché direttamente il vettore velocità $bold(u)$ per semplificare i passaggi algebrici:
 $ d/(dif t) integral_(cal(D)(t)) rho chi dif cal(V) = integral_(cal(D)(t)) underbrace((partial(rho chi))/(partial t), "termine locale") dif cal(V) + integral_(cal(S)(t)) underbrace(rho chi (bold(u)_S dot.op hat(n)), "flusso al contorno") dif cal(S) $
 
 *1. Sviluppo del termine temporale locale* \
