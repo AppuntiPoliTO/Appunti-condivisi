@@ -59,6 +59,19 @@
 Consideriamo l'interazione tra un fluido in movimento e un corpo solido immerso in esso. Questo fenomeno genera una forza aerodinamica risultante, che convenzionalmente scomponiamo in due componenti: la _portanza_ (lift), perpendicolare alla direzione del moto indisturbato, e la _resistenza_ (drag), parallela ad essa. 
 
 A velocità elevate, e in particolare nell'ambito dell'aeroacustica, si osserva che l'intensità del rumore irradiato cresce molto rapidamente con la velocità del flusso. Più precisamente, la potenza acustica irradiata $P_"acustica"$ scala con la settima potenza della velocità caratteristica $U$:
+
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 1em,
+  align: (center + horizon, center + horizon),
+  [
+    cazzoni lunghi
+  ],
+  [#image("images/fig_main_7156.png", width: 100%)]
+)
+
+
+
 $ P_"acustica" prop U^7 $
 Questa dipendenza evidenzia come anche piccoli incrementi di velocità possano comportare un aumento drammatico del rumore aerodinamico.
 
