@@ -15,3 +15,4 @@
 [2026-11-09 00:40:24.370] [LOCAL_EDIT] {"role":"host","file":"calettamenti.typ","cmDocLen":17544,"ytextLen":17544,"hasCrInYText":false,"equal":true}
 [2026-11-09 00:44:00.693] [HOST_STATE_APPLIED] {"role":"host","file":"main.typ","cmDocLen":1545,"ytextLen":1545,"yCollabAttachedNow":true,"equal":true}
 [2026-11-09 00:44:00.697] [HOST_STATE_APPLIED] {"role":"host","file":"main.typ","cmDocLen":1545,"ytextLen":1545,"hasCrInYText":false,"equal":true}
+[2026-11-09 00:44:01.396] [REMOTE_EDIT] {"role":"host","file":"main.typ","cmDocLen":3090,"ytextLen":3090,"hasCrInYText":false,"equal":true}
