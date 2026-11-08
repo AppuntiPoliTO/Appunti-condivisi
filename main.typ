@@ -18,7 +18,7 @@
 
 
 #set heading(numbering: "1.")
-// --- INTESTAZIONE --- cazzi nel culo pisellatici
+// --- INTESTAZIONE ---
 #align(center)[
   #v(0.5cm)
   #line(length: 100%, stroke: 1.5pt)
