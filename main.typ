@@ -81,7 +81,7 @@ Il *momento statico* è una grandezza geometrica fondamentale del primo ordine c
   import draw: *
 
   // 1. Riempimento elemento infinitesimo dA
-  rect((0.83, 0.26), (1.83, 0.86), fill: rgb(198, 217, 241), stroke: none)
+  rect((0.83, 0.26), (1.83, 0.86), fill: rgb("#b8cae0"), stroke: none)
 
   // Contorno di dA (lati verticali continui, orizzontali tratteggiati come nello schizzo)
   line((0.83, 0.26), (0.83, 0.86), stroke: 0.7pt)
