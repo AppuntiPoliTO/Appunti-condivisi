@@ -368,7 +368,7 @@ Consideriamo un sistema di riferimento cartesiano $z y$ con origine nel baricent
   content((1.48, 3.15), text(size: 7pt)[$h$], anchor: "west")
   content((0.65, 1.55), text(size: 7pt)[$y$], anchor: "west")
   content((-0.78, 2.65), text(size: 7pt)[$z$], anchor: "south")
-  content((-3.95, 3.39), text(size: 7pt, fill: rgb(45, 105, 155))[$d y$], anchor: "east")
+  content((-3.95, 3.39), text(size: 7pt, fill: rgb("#005aa3"))[$d y$], anchor: "east")
 
   content((-1.20, 1.58), text(size: 7pt, fill: rgb(80, 90, 105))[$G$], anchor: "north")
   content((-1.00, 2.15), text(size: 7pt)[$y_("G")$], anchor: "west")
