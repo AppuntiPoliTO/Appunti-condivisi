@@ -3383,7 +3383,7 @@ $arrow.r$ Moto di Couette $equiv$ Piano
 )
 #v(1em)
 
-// [DA AUDIO]
+
 Si considera un fluido viscoso compreso tra due piastre piane parallele indefinite, poste a distanza $h$ (unica dimensione geometrica caratteristica del problema). La piastra inferiore ($x_2 = 0$) è ferma, mentre la piastra superiore ($x_2 = h$) trasla nel proprio piano con velocità costante $U_e$ lungo la direzione $x_1$.
 
 A differenza di un fluido ideale (che trasmette solo sforzi normali e rispetta unicamente la condizione di impermeabilità, potendo scorrere senza attrito lungo la parete), un fluido reale viscoso è in grado di trasmettere sforzi tangenziali. Pertanto, vale la *condizione di aderenza* (*no-slip condition*): il fluido a contatto con una parete solida ha velocità relativa nulla rispetto ad essa, assumendone la medesima velocità:
