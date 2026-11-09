@@ -711,7 +711,7 @@ $ z_C = S_y / A = 6750 / 600 = 11,25 #"mm" wide "e" wide y_C = S_z / A = 7500 / 
 
   // 5. Etichette (tutte con text(size: 7pt))
   content((-2.50, 1.85), text(size: 12pt)[$A$], anchor: "east")
-  content((1.92, 0.65), text(size: 12pt, fill: rgb(45, 105, 155))[$d A$], anchor: "west")
+  content((1.92, 0.65), text(size: 12pt, fill: rgb("#1e496c")55))[$d A$], anchor: "west")
   content((1.33, -0.55), text(size: 12pt)[$d P$], anchor: "center")
   content((-0.30, -3.05), text(size: 12pt)[$P$], anchor: "east")
   content((2.92, -2.15), text(size: 10pt)[$z$], anchor: "north")
@@ -1012,7 +1012,7 @@ $ I_p = I_z + I_y = pi / 32 (D^4 - d^4) $
 
   // 3. Tre rette parallele inclinate (23.9 gradi)
   // Retta 1 (superiore)
-  line((-4.63, -0.41), (3.23, 3.07), stroke: 0.7pt + rgb(70, 70, 75))
+  line((-4.63, -0.41), (3.23, 3.07), stroke: 0.7pt + rgb("#393974"))
   // Retta 2 (intermedia)
   line((-4.21, -0.97), (3.23, 2.33), stroke: 0.7pt + rgb(70, 70, 75))
   // Retta 3 (inferiore, passa per dA)
