@@ -711,7 +711,7 @@ $ z_C = S_y / A = 6750 / 600 = 11,25 #"mm" wide "e" wide y_C = S_z / A = 7500 / 
 
   // 5. Etichette (tutte con text(size: 7pt))
   content((-2.50, 1.85), text(size: 12pt)[$A$], anchor: "east")
-  content((1.92, 0.65), text(size: 12pt, fill: rgb("#1e496c")55))[$d A$], anchor: "west")
+  content((1.92, 0.65), text(size: 12pt, fill: rgb("#1e496c"))[$d A$], anchor: "west")
   content((1.33, -0.55), text(size: 12pt)[$d P$], anchor: "center")
   content((-0.30, -3.05), text(size: 12pt)[$P$], anchor: "east")
   content((2.92, -2.15), text(size: 10pt)[$z$], anchor: "north")
