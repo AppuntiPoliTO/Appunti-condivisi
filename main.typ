@@ -81,7 +81,7 @@ Il *momento statico* è una grandezza geometrica fondamentale del primo ordine c
   import draw: *
 
   // 1. Riempimento elemento infinitesimo dA
-  rect((0.83, 0.26), (1.83, 0.86), fill: rgb("#b8cae0"), stroke: none)
+  rect((0.83, 0.26), (1.83, 0.86), fill: rgb(198, 217, 241), stroke: none)
 
   // Contorno di dA (lati verticali continui, orizzontali tratteggiati come nello schizzo)
   line((0.83, 0.26), (0.83, 0.86), stroke: 0.7pt)
@@ -368,7 +368,7 @@ Consideriamo un sistema di riferimento cartesiano $z y$ con origine nel baricent
   content((1.48, 3.15), text(size: 7pt)[$h$], anchor: "west")
   content((0.65, 1.55), text(size: 7pt)[$y$], anchor: "west")
   content((-0.78, 2.65), text(size: 7pt)[$z$], anchor: "south")
-  content((-3.95, 3.39), text(size: 7pt, fill: rgb("#005aa3"))[$d y$], anchor: "east")
+  content((-3.95, 3.39), text(size: 7pt, fill: rgb(45, 105, 155))[$d y$], anchor: "east")
 
   content((-1.20, 1.58), text(size: 7pt, fill: rgb(80, 90, 105))[$G$], anchor: "north")
   content((-1.00, 2.15), text(size: 7pt)[$y_("G")$], anchor: "west")
@@ -711,7 +711,7 @@ $ z_C = S_y / A = 6750 / 600 = 11,25 #"mm" wide "e" wide y_C = S_z / A = 7500 / 
 
   // 5. Etichette (tutte con text(size: 7pt))
   content((-2.50, 1.85), text(size: 12pt)[$A$], anchor: "east")
-  content((1.92, 0.65), text(size: 12pt, fill: rgb("#1e496c"))[$d A$], anchor: "west")
+  content((1.92, 0.65), text(size: 12pt, fill: rgb(45, 105, 155))[$d A$], anchor: "west")
   content((1.33, -0.55), text(size: 12pt)[$d P$], anchor: "center")
   content((-0.30, -3.05), text(size: 12pt)[$P$], anchor: "east")
   content((2.92, -2.15), text(size: 10pt)[$z$], anchor: "north")
@@ -1012,7 +1012,7 @@ $ I_p = I_z + I_y = pi / 32 (D^4 - d^4) $
 
   // 3. Tre rette parallele inclinate (23.9 gradi)
   // Retta 1 (superiore)
-  line((-4.63, -0.41), (3.23, 3.07), stroke: 0.7pt + rgb("#393974"))
+  line((-4.63, -0.41), (3.23, 3.07), stroke: 0.7pt + rgb(70, 70, 75))
   // Retta 2 (intermedia)
   line((-4.21, -0.97), (3.23, 2.33), stroke: 0.7pt + rgb(70, 70, 75))
   // Retta 3 (inferiore, passa per dA)
