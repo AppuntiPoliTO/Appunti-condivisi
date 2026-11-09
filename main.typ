@@ -4,6 +4,9 @@
 #set par(justify: true)
 #set heading(numbering: none)
 #set page(margin: 1.5cm)
+#let immagine-originale = image
+#let image(nome-file, ..args) = immagine-originale("images/" + nome-file, ..args)
+// Nota / osservazione
 #let nota(body) = block(
   width: 100%, fill: luma(240), inset: 8pt, radius: 3pt, body,)
 #let circ = sym.degree
@@ -59,10 +62,6 @@
 Consideriamo l'interazione tra un fluido in movimento e un corpo solido immerso in esso. Questo fenomeno genera una forza aerodinamica risultante, che convenzionalmente scomponiamo in due componenti: la _portanza_ (lift), perpendicolare alla direzione del moto indisturbato, e la _resistenza_ (drag), parallela ad essa. 
 
 A velocità elevate, e in particolare nell'ambito dell'aeroacustica, si osserva che l'intensità del rumore irradiato cresce molto rapidamente con la velocità del flusso. Più precisamente, la potenza acustica irradiata $P_"acustica"$ scala con la settima potenza della velocità caratteristica $U$:
-
-
-
-
 $ P_"acustica" prop U^7 $
 Questa dipendenza evidenzia come anche piccoli incrementi di velocità possano comportare un aumento drammatico del rumore aerodinamico.
 
@@ -1019,7 +1018,7 @@ $ arrow(S) = -gamma hat(n) integral_A h dif A $
 Dal sistema di riferimento adottato, l'affondamento $h$ vale geometricamente $h = x sin alpha$:
     $ arrow(S) = -hat(n) gamma sin alpha integral_A x dif A $
 #align(center)[
-  #image("images/image9new.png", width: 60%)
+  #image("image9new.png", width: 60%)
 ]
 L'integrale $integral_A x dif A$ rappresenta il Momento statico di primo ordine dell'area rispetto all'asse di sponda $y$, indicato con $M_y = x_G A$, dove $x_G$ è la coordinata del baricentro. Sostituendo:
 $ arrow(S) = -hat(n) gamma underbrace(sin alpha thin x_G, h_G) A = - underbrace(gamma h_G, p_G) A thin hat(n) $
@@ -1698,7 +1697,73 @@ La retta d'azione di $arrow(S)_0$ coincide con quella di $arrow(Pi)_0$ (stessa d
     
   ],
   [
-   
+    // FASE 0 - COMPRENSIONE
+// Il disegno illustra la dimostrazione del principio di Archimede (spinta idrostatica su un corpo immerso).
+// Sono presenti: il piano dei carichi idrostatici (p.c.i.) con il simbolo del pelo libero, un corpo immerso di forma generica (campito a righe nere), le proiezioni verticali (in rosso) che delimitano il cilindro fluido sovrastante, il volume V1 sovrastante la superficie superiore (campito a righe rosse), il volume complessivo V2 fino alla superficie inferiore (campito a righe verdi), le piccole frecce della distribuzione di pressione lungo tutto il contorno e le risultanti verticali F_sopra (verso il basso) e F_sotto (verso l'alto).
+
+// FASE 1 - ANALISI
+// 1. PANNELLI E SCALA
+// Un solo pannello. Dimensioni immagine circa 600 x 560 px.
+// Scelgo origine O = (0, 0) in basso a sinistra, N = 75 px/cm -> larghezza circa 8.0 cm, altezza circa 7.2 cm.
+// Piano dei carichi idrostatici (p.c.i.): retta orizzontale a quota y = 6.2.
+
+// 2. ELEMENTI E CLASSIFICAZIONE DEL CONTORNO DEL CORPO
+// Il corpo immerso ha una forma chiusa generica (patata idrostatica) con concavità variabili e flessi lungo il fianco sinistro e destro.
+// Punti estremi di tangenza verticale (che definiscono i limiti del cilindro di proiezione):
+// Estremo sinistro: P_L = (0.8, 3.7), tangente verticale T = (0, -1).
+// Estremo destro:   P_R = (5.8, 2.2), tangente verticale T = (0, -1).
+// Estremo superiore piatto/colmo: P_T = (3.4, 4.5), tangente orizzontale T = (1, 0).
+// Estremo inferiore (fondo):      P_B = (3.6, 1.3), tangente orizzontale T = (1, 0).
+//
+// Campioni del contorno chiuso (in senso orario a partire da P_L):
+// i |   x   |   y   | note
+// 0 | 0.80  | 3.70  | estremo sinistro P_L (tangente verticale)
+// 1 | 1.30  | 4.35  | spalla superiore sinistra
+// 2 | 2.30  | 4.48  | tratto superiore quasi piatto
+// 3 | 3.40  | 4.50  | colmo superiore P_T (tangente orizzontale)
+// 4 | 4.65  | 4.25  | spalla superiore destra
+// 5 | 5.15  | 3.55  | flesso fianco destro P_FR
+// 6 | 5.45  | 2.90  | rientranza destra
+// 7 | 5.80  | 2.20  | estremo destro P_R (tangente verticale)
+// 8 | 5.20  | 1.55  | pancia inferiore destra
+// 9 | 3.60  | 1.30  | fondo P_B (tangente orizzontale)
+// 10| 2.15  | 1.75  | pancia inferiore sinistra
+// 11| 1.75  | 2.65  | flesso fianco sinistro P_FL
+// 12| 1.15  | 3.20  | rientranza sinistra
+//
+// Test del cerchio sul contorno: raggio medio circa 2.1, ma scarto massimo e_max = 0.34 > 0.08 -> fallito.
+// Test dell'ellisse con assi paralleli: cx = 3.3, cy = 2.9, a = 2.5, b = 1.6 -> sul campione 5 e 11 e_max = 0.28 > 0.08 -> fallito.
+// Inoltre sono presenti 2 flessi evidenti (uno sul fianco sinistro in P_FL=(1.65, 2.75) e uno sul fianco destro in P_FR=(5.25, 3.40)).
+// // BEZIER NECESSARIO: cerchio e_max = 0.34, ellisse e_max = 0.28, presenza di flessi sui fianchi.
+// Suddivido il contorno in 6 tratti di Bezier cubici con giunzioni C1 (stesse coordinate e stessa tangente unitaria nei punti di raccordo):
+// Tratto 1 (P_L -> P_T): da (0.80, 3.70) con T0=(0, 1) a (3.40, 4.50) con T3=(1, 0).
+//   Controlli: C1 = (0.80, 4.45), C2 = (2.00, 4.50).
+// Tratto 2 (P_T -> P_FR): da (3.40, 4.50) con T0=(1, 0) a (5.25, 3.40) con T3=(0.24, -0.97).
+//   Controlli: C1 = (4.60, 4.50), C2 = (5.10, 4.00).
+// Tratto 3 (P_FR -> P_R): da (5.25, 3.40) con T0=(0.24, -0.97) a (5.80, 2.20) con T3=(0, -1).
+//   Controlli: C1 = (5.40, 2.80), C2 = (5.80, 2.65).
+// Tratto 4 (P_R -> P_B): da (5.80, 2.20) con T0=(0, -1) a (3.60, 1.30) con T3=(-1, 0).
+//   Controlli: C1 = (5.80, 1.50), C2 = (4.80, 1.30).
+// Tratto 5 (P_B -> P_FL): da (3.60, 1.30) con T0=(-1, 0) a (1.65, 2.75) con T3=(-0.60, 0.80).
+//   Controlli: C1 = (2.30, 1.30), C2 = (2.05, 2.20).
+// Tratto 6 (P_FL -> P_L): da (1.65, 2.75) con T0=(-0.60, 0.80) a (0.80, 3.70) con T3=(0, 1).
+//   Controlli: C1 = (1.25, 3.30), C2 = (0.80, 3.25).
+
+// 3. LINEE DI PROIEZIONE, TRATTEGGI E VETTORI
+// - Retta p.c.i.: da (0.1, 6.2) a (7.4, 6.2).
+// - Simbolo pelo libero: triangolo a (1.5, 6.2) - (1.3, 6.5) - (1.7, 6.5), più segmenti sottostanti.
+// - Linee verticali rosse di proiezione:
+//   Sinistra: da (0.80, 3.70) a (0.80, 6.20) (tratteggiata a tratti lunghi nella parte alta come nello schizzo, realizzata con segmenti rossi).
+//   Destra: da (5.80, 2.20) a (5.80, 6.20) (linea continua rossa).
+// - Campitura rossa (V1, sopra il corpo): linee parallele inclinate da basso-sinistra ad alto-destra.
+// - Campitura verde (V2, da p.c.i. fino al fondo del corpo): linee parallele inclinate da alto-sinistra a basso-destra.
+// - Campitura nera (corpo): 4 segmenti paralleli inclinati da basso-sinistra ad alto-destra interni al corpo.
+// - Frecce di pressione: 17 piccole frecce nere lungo tutto il perimetro con punta sul contorno.
+// - Forze risultanti:
+//   F_sopra: freccia doppia verticale da (3.60, 5.55) a (3.60, 4.50).
+//   F_sotto: freccia doppia verticale da (3.20, 0.25) a (3.20, 1.32).
+
+// FASE 2 - COSTRUZIONE
 #canvas(length: 1cm, {
   import draw: *
 
@@ -1782,7 +1847,7 @@ La retta d'azione di $arrow(S)_0$ coincide con quella di $arrow(Pi)_0$ (stessa d
 )
 #v(1em)
 *Principio di Archimede:* un corpo immerso riceve una spinta verticale verso l'alto di modulo pari al peso del volume di fluido spostato ($S_"gall" = gamma V$).
-
+    
     Il peso proprio del corpo è $arrow(P) = gamma_s V hat(k)$. Il comportamento cinematico dipenderà dalla densità del solido rispetto a quella del fluido:
     - $gamma_s > gamma ==>$ il corpo *affonda*.
     - $gamma_s = gamma ==>$ equilibrio *indifferente* (resta sospeso).
@@ -2111,7 +2176,7 @@ Un celebre risultato si ottiene applicando il bilancio di massa a un condotto a 
     Poiché le pareti sono impermeabili, il flusso normale attraverso $S_w$ è nullo ($bold(u) dot hat(n)_w = 0$). Sulle sezioni di ingresso e uscita assumiamo velocità uniformi e allineate con la normale. Scegliendo $hat(n)$ uscente dal volume:
   ],
   [
-    #image("images/condotto.png", width:110% )
+    #image("condotto.png", width:110% )
   ]
 )
 #v(1em)
@@ -3383,7 +3448,7 @@ $arrow.r$ Moto di Couette $equiv$ Piano
 )
 #v(1em)
 
-
+// [DA AUDIO]
 Si considera un fluido viscoso compreso tra due piastre piane parallele indefinite, poste a distanza $h$ (unica dimensione geometrica caratteristica del problema). La piastra inferiore ($x_2 = 0$) è ferma, mentre la piastra superiore ($x_2 = h$) trasla nel proprio piano con velocità costante $U_e$ lungo la direzione $x_1$.
 
 A differenza di un fluido ideale (che trasmette solo sforzi normali e rispetta unicamente la condizione di impermeabilità, potendo scorrere senza attrito lungo la parete), un fluido reale viscoso è in grado di trasmettere sforzi tangenziali. Pertanto, vale la *condizione di aderenza* (*no-slip condition*): il fluido a contatto con una parete solida ha velocità relativa nulla rispetto ad essa, assumendone la medesima velocità:
