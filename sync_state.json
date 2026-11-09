@@ -1,19 +1,91 @@
 {
   "branches": {
+    "doc/aldomoro-ecm-2": {
+      "folder_name": "_ALDOMORO_ ECM 2",
+      "branch": "doc/aldomoro-ecm-2",
+      "last_commit_oid": "68f4643e74c808d2995d8d3ad11a19ef65e4d308",
+      "pending_push": false,
+      "last_attempt_timestamp": "2026-11-09 17:59:39",
+      "last_error": null
+    },
+    "doc/ecm": {
+      "folder_name": "ECM",
+      "branch": "doc/ecm",
+      "last_commit_oid": "a6ea4d8a07591b7cf23f1635b2b8c85ef537f9c3",
+      "pending_push": false,
+      "last_attempt_timestamp": "2026-11-09 18:00:07",
+      "last_error": null
+    },
+    "doc/aldomoro-analisi-2": {
+      "folder_name": "ALDOMORO Analisi 2",
+      "branch": "doc/aldomoro-analisi-2",
+      "last_commit_oid": "efe2ef35d8e2082121043e7b52161a77b36de4b6",
+      "pending_push": false,
+      "last_attempt_timestamp": "2026-11-09 18:00:10",
+      "last_error": null
+    },
+    "doc/aldomoro-ecm": {
+      "folder_name": "_ALDOMORO_ ECM",
+      "branch": "doc/aldomoro-ecm",
+      "last_commit_oid": "073eee669a6b3b0b4d3bbd9bae695bab77dbcf21",
+      "pending_push": false,
+      "last_attempt_timestamp": "2026-11-09 17:59:36",
+      "last_error": null
+    },
+    "doc/aldomoro-fms": {
+      "folder_name": "_ALDOMORO_ fms",
+      "branch": "doc/aldomoro-fms",
+      "last_commit_oid": "caf60cab42add030913fb27622bd1d739faea490",
+      "pending_push": false,
+      "last_attempt_timestamp": "2026-11-09 17:59:53",
+      "last_error": null
+    },
+    "doc/aldomoro-meccanica-dei-fluidi": {
+      "folder_name": "_ALDOMORO_ Meccanica dei Fluidi",
+      "branch": "doc/aldomoro-meccanica-dei-fluidi",
+      "last_commit_oid": "ce4cdec8f34e89075915763a236adbeb9470fc1a",
+      "pending_push": false,
+      "last_attempt_timestamp": "2026-11-09 18:00:00",
+      "last_error": null
+    },
+    "doc/aldomoro-elettrotecnica": {
+      "folder_name": "_ALDOMORO_ elettrotecnica",
+      "branch": "doc/aldomoro-elettrotecnica",
+      "last_commit_oid": "97b67786444a26d5f4370e5bd8cdda4c6d140229",
+      "pending_push": false,
+      "last_attempt_timestamp": "2026-11-09 17:59:43",
+      "last_error": null
+    },
+    "doc/aldomoro-chimica": {
+      "folder_name": "_ALDOMORO_ chimica",
+      "branch": "doc/aldomoro-chimica",
+      "last_commit_oid": "11c245e8e8e50e843bcc64c4f1b2f0dd6acb5fb6",
+      "pending_push": false,
+      "last_attempt_timestamp": "2026-11-09 17:59:32",
+      "last_error": null
+    },
     "doc/alberi": {
       "folder_name": "alberi",
       "branch": "doc/alberi",
-      "last_commit_oid": "77fc39f19ea0dbc1ffc6a9bcf05f125d2a111898",
+      "last_commit_oid": "b8c3a7db24db91c385c8d506373b575ccc987dcf",
       "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:50",
+      "last_attempt_timestamp": "2026-11-09 18:00:04",
+      "last_error": null
+    },
+    "doc/aldomoro-esercitazioni": {
+      "folder_name": "_ALDOMORO_ esercitazioni",
+      "branch": "doc/aldomoro-esercitazioni",
+      "last_commit_oid": "24bae23cf0408fabf0cf8771c57fc6fc0d5d2964",
+      "pending_push": false,
+      "last_attempt_timestamp": "2026-11-09 17:59:49",
       "last_error": null
     },
     "doc/aldomoro-es-mf": {
       "folder_name": "_ALDOMORO_ es mf",
       "branch": "doc/aldomoro-es-mf",
-      "last_commit_oid": "97bb5f016c86edf3cda11ca900088c874ea4995d",
+      "last_commit_oid": "aff68e2803e6441a288f5192672af580c71cc8c3",
       "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:43",
+      "last_attempt_timestamp": "2026-11-09 17:59:46",
       "last_error": null
     },
     "doc/file": {
@@ -22,70 +94,6 @@
       "last_commit_oid": "495a167c1b424c1fb7ed7dc2440ca8c6f3b1897e",
       "pending_push": false,
       "last_attempt_timestamp": "2026-11-07 16:25:12",
-      "last_error": null
-    },
-    "doc/aldomoro-analisi-2": {
-      "folder_name": "_ALDOMORO_ Analisi 2",
-      "branch": "doc/aldomoro-analisi-2",
-      "last_commit_oid": "79773dbb7b7ff1fa96225ba57eea7053743b0e2f",
-      "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:32",
-      "last_error": null
-    },
-    "doc/aldomoro-ecm": {
-      "folder_name": "_ALDOMORO_ ECM",
-      "branch": "doc/aldomoro-ecm",
-      "last_commit_oid": "152abdb682409c10c07fd9d641b54b914079e961",
-      "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:37",
-      "last_error": null
-    },
-    "doc/aldomoro-meccanica-dei-fluidi": {
-      "folder_name": "_ALDOMORO_ Meccanica dei Fluidi",
-      "branch": "doc/aldomoro-meccanica-dei-fluidi",
-      "last_commit_oid": "9aaf8a0f8a1f6dcaf800b6031ff0ea839e22ea59",
-      "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:48",
-      "last_error": null
-    },
-    "doc/aldomoro-elettrotecnica": {
-      "folder_name": "_ALDOMORO_ elettrotecnica",
-      "branch": "doc/aldomoro-elettrotecnica",
-      "last_commit_oid": "ed916dcf0b6ebc83afab4bf1f55aed9b4eaf2d68",
-      "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:41",
-      "last_error": null
-    },
-    "doc/aldomoro-chimica": {
-      "folder_name": "_ALDOMORO_ chimica",
-      "branch": "doc/aldomoro-chimica",
-      "last_commit_oid": "c3e2a4854b67640e22a4a6808caa1407abe99021",
-      "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:35",
-      "last_error": null
-    },
-    "doc/aldomoro-ecm-2": {
-      "folder_name": "_ALDOMORO_ ECM 2",
-      "branch": "doc/aldomoro-ecm-2",
-      "last_commit_oid": "9a18b335d267a3266d7b4d2c3186402f9b64220c",
-      "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:39",
-      "last_error": null
-    },
-    "doc/aldomoro-fms": {
-      "folder_name": "_ALDOMORO_ fms",
-      "branch": "doc/aldomoro-fms",
-      "last_commit_oid": "dddd60c4a7627c36ad834cfd7edc89ca1c36efc7",
-      "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:46",
-      "last_error": null
-    },
-    "doc/aldomoro-esercitazioni": {
-      "folder_name": "_ALDOMORO_ esercitazioni",
-      "branch": "doc/aldomoro-esercitazioni",
-      "last_commit_oid": "58b0bece456392b80bcbafb3ee2e936d018e9623",
-      "pending_push": false,
-      "last_attempt_timestamp": "2026-11-09 00:13:44",
       "last_error": null
     }
   }
