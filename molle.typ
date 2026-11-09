@@ -4,6 +4,8 @@
 #set par(justify: true)
 #set heading(numbering: none)
 #set page(margin: 1.5cm)
+#let immagine-originale = image
+#let image(nome-file, ..args) = immagine-originale("images/" + nome-file, ..args)
 // Nota / osservazione
 #let nota(body) = block(
   width: 100%, fill: luma(240), inset: 8pt, radius: 3pt, body,)
@@ -45,7 +47,7 @@ dove $F$ e $M$ sono rispettivamente la forza in Newton e il momento in Newton-me
   align: (left + horizon, center + horizon),[L'energia complessiva immagazzinata dalla molla corrisponde all'area sottesa alla curva caratteristica. Nel caso di una caratteristica lineare, tale area è un triangolo, pertanto l'energia potenziale elastica $W$ vale:
 
 $ W = frac(F f, 2) $ A seconda della legge di variazione della rigidezza, la caratteristica può deviare dal comportamento lineare, presentando due tipologie di non linearità:],[
-#image("images/grafico molla 1.png", width:90%)
+#image("grafico molla 1.png", width:90%)
 ])
 
 
@@ -57,7 +59,7 @@ $ W = frac(F f, 2) $ A seconda della legge di variazione della rigidezza, la car
   columns: (1.2fr, 1fr),
   column-gutter: 1em,
   align: (left + horizon, center + horizon),[La forma di molla più vicina alla teoria classica della trave, utilizzata come paradigma per lo studio strutturale di molle più complesse (come quelle ad elica cilindrica), è la barra di torsione. Essa è costituita da un cilindro solido (una trave a sezione circolare) incastrato a un'estremità e libero all'altra. All'estremità libera è tipicamente collegato un braccio rigido (piattello o leva) a cui viene applicata una forza $F$. Il comportamento della barra è dominato dal momento torcente $M_t = F dot.op r$, dove $r$ è il braccio rigido. La tensione tangenziale massima $tau_(m a x)$ si calcola dividendo il momento torcente per il modulo di resistenza a torsione $w_t$:],[
-#image("images/barra di torsione.png",width:90%)
+#image("barra di torsione.png",width:90%)
 ])
 $ tau_(m a x) = frac(M_t, w_t) = frac(F r, pi d^3 / 16) $
 
@@ -82,7 +84,7 @@ $ G = frac(E, 2(1+nu)) $
   columns: (1fr, 1fr),
   column-gutter: 1em,
   align: (left + horizon, center + horizon),[Nella realizzazione pratica di una barra di torsione, le estremità destinate al vincolo richiedono particolari accorgimenti. Il collegamento viene spesso realizzato tramite un profilo scanalato. Questa soluzione permette di trasmettere efficacemente il momento torcente e le reazioni vincolari, consentendo al contempo un minimo grado di libertà in direzione assiale per compensare eventuali elongazioni termiche o disturbi assiali.],[
-#image("images/dettaglio barra di torsione.png", width:75%)
+#image("dettaglio barra di torsione.png", width:75%)
 ])
 
 Nel passaggio dal diametro maggiore della porzione scanalata al diametro minore della parte centrale attiva della barra, è fondamentale inserire un ampio raggio di raccordo. Questo dettaglio costruttivo è necessario per mitigare l'effetto di concentrazione delle tensioni (intaglio) causato dalla variazione di sezione. Esistono anche soluzioni alternative per le estremità, come teste a profilo esagonale o poligonale, che offrono facce di riscontro adeguate per la trasmissione del momento pur consentendo lievi adattamenti assiali.
@@ -96,7 +98,7 @@ La barra di torsione viene montata trasversalmente per collegare i due bracci de
   columns: (1fr, 1fr),
   column-gutter: 1em,
   align: (left + horizon, center + horizon),[Le molle a elica cilindrica sono assimilabili a delle barre di torsione avvolte a elica attorno a un cilindro ideale. La geometria macroscopica della molla è determinata dal diametro del cilindro, indicato con $D = 2r$, dove $r$ rappresenta la distanza tra l'asse del cilindro (su cui si intende applicata la forza risultante) e il centro della sezione trasversale del filo. Il filo stesso, di sezione circolare, è caratterizzato da un diametro $d$. L'inclinazione dell'elica è misurata dall'angolo $alpha$, e la molla a riposo, scarica da azioni esterne, possiede una lunghezza libera indicata con $L_0$.],[
-#image("images/schema molla elica cilindrica.png", width:50%)
+#image("schema molla elica cilindrica.png", width:50%)
 ])
 
 A seconda della direzione del carico applicato lungo l'asse, macroscopicamente le molle vengono definite in modo improprio di trazione o di compressione, poiché permettono a un elemento ad esse collegato di compiere uno spostamento traslatorio. Tuttavia, il comportamento meccanico del materiale è diverso: la deformazione effettiva della molla è in gran parte dovuta alla torsione del filo avvolto a elica. Pertanto, l'elemento agisce a tutti gli effetti come un'estensione del paradigma della barra di torsione diritta. 

@@ -4,6 +4,9 @@
 #set par(justify: true)
 #set heading(numbering: none)
 #set page(margin: 1.5cm)
+#let immagine-originale = image
+#let image(nome-file, ..args) = immagine-originale("images/" + nome-file, ..args)
+// Nota / osservazione
 #let nota(body) = block(
   width: 100%, fill: luma(240), inset: 8pt, radius: 3pt, body,)
 #let circ = sym.degree
@@ -594,7 +597,7 @@ $ sigma_"max" = 0, quad sigma_"min" = -2 sigma_a = 2 sigma_m < 0, quad R = lim_(
   content((-3.30, -2.24), text(size: 7pt)[“spiaggia”], anchor: "center")
   content((-3.30, -2.56), text(size: 7pt)[(beachmarks)], anchor: "center")
 })
-)],[#image("images/linee_di_spiaggia.jpg", width: 80%)])
+)],[#image("linee_di_spiaggia.jpg", width: 80%)])
 
 
 *Esempi reali di innesco su organi di macchine:* Nella pratica ingegneristica l'innesco è spesso innescato dalla sinergia tra geometria e condizioni superficiali:
@@ -1760,7 +1763,7 @@ dove $W_f$ è il modulo di resistenza a flessione.
     *Risultato fondamentale:* Il provino subisce localmente un carico ciclico nel tempo rigorosamente *alterno simmetrico* ($sigma_m = 0$, $R = -1$).
   ],
   [
-    #image("images/image2.png", width: 90%)
+    #image("image2.png", width: 90%)
   ]
 )
 #v(1em)
@@ -2319,7 +2322,7 @@ La presenza di un'ampia zona plastica permette di differenziare più modalità d
     $ sigma_("id", max) = sigma_max / 2 + sqrt((sigma_max / 2)^2 + tau_max^2) <= R_m $
   ],
   [
-    #image("images/image9.png", width: 70%)
+    #image("image9.png", width: 70%)
   ]
 )
 #v(1em)
@@ -2339,7 +2342,7 @@ Poiché la ridistribuzione plastica attorno a geometrie intagliate 3D è ingover
     $ sigma_("id", max) = sqrt((sigma_max^b + sigma_max^(t c))^2 + 3 tau_max^2) < R_(e H) $
   ],
   [
-    #image("images/image9.png", width: 70%)
+    #image("image9.png", width: 70%)
   ]
 )
 #v(1em)
@@ -2354,7 +2357,7 @@ Poiché la ridistribuzione plastica attorno a geometrie intagliate 3D è ingover
     $ sigma_("id", "nom") = sqrt((sigma_"nom"^b + sigma_"nom"^(t c))^2 + 3 tau_"nom"^2) < R_(e H) $
   ],
   [
-    #image("images/image9.png", width: 70%)
+    #image("image9.png", width: 70%)
   ]
 )
 #v(1em)
