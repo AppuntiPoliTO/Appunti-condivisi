@@ -4,9 +4,6 @@
 #set par(justify: true)
 #set heading(numbering: none)
 #set page(margin: 1.5cm)
-#let immagine-originale = image
-#let image(nome-file, ..args) = immagine-originale("images/" + nome-file, ..args)
-// Nota / osservazione
 #let nota(body) = block(
   width: 100%, fill: luma(240), inset: 8pt, radius: 3pt, body,)
 #let circ = sym.degree
@@ -1217,7 +1214,7 @@ Normalmente, nell'impostare il progetto dell'accoppiamento cinematico tra due ru
 
 
 #align(center)[
-  #image("4d741021-6053-41b2-a86d-c4ffa4912f8f-10_332_1197_904_433.jpg", width: 80%)
+  #image("images/4d741021-6053-41b2-a86d-c4ffa4912f8f-10_332_1197_904_433.jpg", width: 80%)
 ]
 == Condizioni per il corretto ingranamento
 
@@ -1239,7 +1236,7 @@ Ricordando inoltre che il diametro primitivo è espresso dal prodotto tra il mod
 #v(1em)
 
 #align(center)[
-  #image("4d741021-6053-41b2-a86d-c4ffa4912f8f-10_255_1195_2191_392.jpg", width: 80%)
+  #image("images/4d741021-6053-41b2-a86d-c4ffa4912f8f-10_255_1195_2191_392.jpg", width: 80%)
 ]
 === Condizione geometrica di non interferenza
 
@@ -1459,7 +1456,7 @@ Per evitare condizioni di interferenza geometrica alla base del dente durante l'
     ]
   ,
   [
-    #image("4d741021-6053-41b2-a86d-c4ffa4912f8f-11_578_680_1927_1008.jpg", width: 90%)
+    #image("images/4d741021-6053-41b2-a86d-c4ffa4912f8f-11_578_680_1927_1008.jpg", width: 90%)
   ]
 )
 
@@ -1543,7 +1540,7 @@ Nelle trasmissioni tra assi incidenti, la forma dei denti di una ruota conica è
   ],
   [
     #figure(
-      image("4d741021-6053-41b2-a86d-c4ffa4912f8f-13_644_676_527_416.jpg", width: 90%),
+      image("images/4d741021-6053-41b2-a86d-c4ffa4912f8f-13_644_676_527_416.jpg", width: 90%),
       caption: [[libro di testo]],
       supplement: none,
     )
@@ -2395,7 +2392,7 @@ Per quanto riguarda le trasmissioni tra *alberi ad assi sghembi* (tipicamente or
     / Ruote ipoidi: soluzione alternativa a geometria *toroidale/iperboloidica* con denti curvi. Esse consentono un ingranamento molto graduale e silenzioso, riducendo sensibilmente le dimensioni del pignone e l'*ingombro complessivo* della trasmissione, ma richiedono una modellazione matematica complessa che esula da questa trattazione.
   ],
   align(center)[
-    #image("cb5ee1bc-b806-48b7-aed4-c871d2df87c7-03_372_626_790_993.jpg", width: 95%)
+    #image("images/cb5ee1bc-b806-48b7-aed4-c871d2df87c7-03_372_626_790_993.jpg", width: 95%)
   ]
 )
 
